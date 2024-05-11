@@ -5,8 +5,8 @@ function Todolist() {
   const [todo, setTodo] = useState([]);
   const [work, setWork] = useState('');
   const [showInputField, setShowInputField] = useState(true);
-  const [completedTask,setCompletedTask] = useState([])
-  const [removedTask,setRemovedTask] = useState([])
+  const [completedTask,setCompletedTask] = useState([]);
+  const [removedTask,setRemovedTask] = useState([]);
 
   const addWork = () => {
     if (work.trim() !== '') {
