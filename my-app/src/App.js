@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './App.css';
+
 
 function Todolist() {
   const [todo, setTodo] = useState([]);
@@ -7,6 +8,10 @@ function Todolist() {
   const [showInputField, setShowInputField] = useState(true);
   const [completedTask,setCompletedTask] = useState([]);
   const [removedTask,setRemovedTask] = useState([]);
+
+  useEffect (()=>{
+    document.title = "Todo App"
+  },[]);
 
   const addWork = () => {
     if (work.trim() !== '') {
