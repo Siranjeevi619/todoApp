@@ -8,10 +8,7 @@ function Todolist() {
   const [completedTask,setCompletedTask] = useState([]);
   const [removedTask,setRemovedTask] = useState([]);
 
-  useEffect (()=>{
-    document.title = "Todo App"
-  },[]);
-
+  
   const addWork = () => {
     if (work.trim() !== '') {
       setTodo([...todo, work]);
@@ -47,7 +44,6 @@ function Todolist() {
 
   return (
     <div className='container-fluid'>
-      {/* addTaskCard */}
       <div className=''>
         <h1 className='h1 text-white fw-1 text-center nav-bar'>To-do List</h1>
         <div className='container-fluid'>
@@ -101,12 +97,9 @@ function Todolist() {
                             <button className='btn edit-btn' onClick={()=>updateWork(index)} ><i className="bi bi-pencil-square"></i></button>
                             <button onClick={() => deleteWork(index)} className='btn delete-btn '><i class="bi bi-trash3-fill"></i></button>
                             </div>
-                      
                         </div>
                         ))}
                           </div>
-                    
-
                       </div>
                       <div class="tab-pane fade" id="completedTask" role="tabpanel" aria-labelledby="nav-profile-tab">
                         {
@@ -136,7 +129,6 @@ function Todolist() {
               </div>
             </div>
             <div className='col-md-3 col-sm-3'>
-
             </div>
           </div>
         </div>
