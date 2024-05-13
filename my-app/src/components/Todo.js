@@ -1,14 +1,13 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import './styles/style.css';
 
 function Todolist() {
-  const [todo, setTodo] = useState([]);
-  const [work, setWork] = useState('');
-  const [showInputField, setShowInputField] = useState(true);
-  const [completedTask,setCompletedTask] = useState([]);
-  const [removedTask,setRemovedTask] = useState([]);
+  const [todo, setTodo] = useState([])
+  const [work, setWork] = useState('')
+  const [showInputField, setShowInputField] = useState(true)
+  const [completedTask,setCompletedTask] = useState([])
+  const [removedTask,setRemovedTask] = useState([])
 
-  
   const addWork = () => {
     if (work.trim() !== '') {
       setTodo([...todo, work]);
@@ -21,8 +20,6 @@ function Todolist() {
     setRemovedTask(changedTodo.splice(workIndex, 1));
     setTodo(changedTodo);
   };
-
-
   const updateWork =(workIndex)=>{
     const newTask = prompt('Enter the new task:')
     if(newTask !== null){
@@ -31,7 +28,6 @@ function Todolist() {
       setTodo(updateTask)
     }
   }
-
   const completedWork = (workIndex) =>{
     const completedTaskArr = [...todo]
     const setCompTask = completedTaskArr[workIndex]
@@ -49,11 +45,10 @@ function Todolist() {
         <div className='container-fluid'>
           <div className='row'>
             <div className='col-md-3 col-sm-3'>
-
             </div>
-            <div className='col-12 col-md-6 col-sm-6 mt-5 border-2'>
-              <div className='border shadow'>
-               <div className='p-md-5 p-4'>
+            <div className = 'col-12 col-md-6 col-sm-6 mt-5 border-2'>
+              <div className ='border shadow'>
+               <div className ='p-md-5 p-4'>
                {showInputField ? (
                   <div className=''>
                     <div className='input-group'>
